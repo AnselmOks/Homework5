@@ -24,10 +24,12 @@ public class Main {
         int year = 2021;
         if (year < 1584) {
             System.out.println("Год " + year + " не является високосным");
-        } else if ((year % 100 == 0) || (year % 4 != 0)) {
-            System.out.println("Год " + year + " не является високосным");
-        } else {
+        } else if (year % 400 == 0) {
             System.out.println("Год " + year + " является високосным");
+        } else if ((year % 4 == 0) && (year % 100 != 0)) {
+            System.out.println("Год " + year + " является високосным");
+        } else {
+            System.out.println("Год " + year + " не является високосным");
         }
 
         //Задача 4
